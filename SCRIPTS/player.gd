@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 
 var momevemtSpeed = 80.0
+var hp = 100
 @onready var sprite = $Sprite2D
 @onready var walkTimer = get_node("%walkTimer")
 
@@ -34,3 +35,8 @@ func movement():
     velocity = mov.normalized()*momevemtSpeed
     move_and_slide()
 
+
+
+func _on_hurt_box_hurt(damage:Variant):
+    hp -= damage
+    print(hp)

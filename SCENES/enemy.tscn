@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c023oub3k1r48"]
+[gd_scene load_steps=11 format=3 uid="uid://c023oub3k1r48"]
 
 [ext_resource type="Script" path="res://SCRIPTS/enemy.gd" id="1_cftyf"]
 [ext_resource type="Texture2D" uid="uid://bu8uaywsf8sm4" path="res://PLACEHOLDERS/Textures/Enemy/kolbold_weak.png" id="1_k3vxl"]
+[ext_resource type="PackedScene" uid="uid://bjx4q3ob5mh1x" path="res://SCENES/UTILS/hurt_box.tscn" id="3_ceqre"]
+[ext_resource type="PackedScene" uid="uid://cefeoxfuc8sbq" path="res://SCENES/hit_box.tscn" id="4_hi56t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xn3fx"]
 radius = 8.0
@@ -45,6 +47,12 @@ _data = {
 "walk": SubResource("Animation_07ow4")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_msyba"]
+size = Vector2(24, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5e66r"]
+size = Vector2(16, 22)
+
 [node name="enemy_kolbold_weak" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_cftyf")
@@ -61,3 +69,24 @@ shape = SubResource("CapsuleShape2D_xn3fx")
 libraries = {
 "": SubResource("AnimationLibrary_p75rw")
 }
+
+[node name="HurtBox" parent="." instance=ExtResource("3_ceqre")]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_msyba")
+
+[node name="HitBox" parent="." instance=ExtResource("4_hi56t")]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_5e66r")
+
+[connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
+
+[editable path="HurtBox"]
+[editable path="HitBox"]
