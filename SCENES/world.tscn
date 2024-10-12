@@ -20,7 +20,7 @@ time_start = 6
 time_end = 20
 enemy = ExtResource("3_y88aa")
 enemy_num = 10
-enemy_spawn_delay = 0
+enemy_spawn_delay = 2
 
 [node name="World" type="Node2D"]
 
