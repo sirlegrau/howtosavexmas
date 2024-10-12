@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://SCRIPTS/enemy.gd" id="1_cftyf"]
 [ext_resource type="Texture2D" uid="uid://bu8uaywsf8sm4" path="res://PLACEHOLDERS/Textures/Enemy/kolbold_weak.png" id="1_k3vxl"]
 [ext_resource type="PackedScene" uid="uid://bjx4q3ob5mh1x" path="res://SCENES/UTILS/hurt_box.tscn" id="3_ceqre"]
-[ext_resource type="PackedScene" uid="uid://cefeoxfuc8sbq" path="res://SCENES/hit_box.tscn" id="4_hi56t"]
+[ext_resource type="PackedScene" uid="uid://dnrew64hvb1bs" path="res://SCENES/hit_box.tscn" id="4_hi56t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xn3fx"]
 radius = 8.0

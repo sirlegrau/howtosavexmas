@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnrew64hvb1bs"]
+[gd_scene load_steps=2 format=3 uid="uid://cefeoxfuc8sbq"]
 
 [ext_resource type="Script" path="res://SCRIPTS/hit_box.gd" id="1_rqbir"]
 
