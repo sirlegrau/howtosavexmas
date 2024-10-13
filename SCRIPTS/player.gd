@@ -104,7 +104,7 @@ func movement():
 
 
 
-func _on_hurt_box_hurt(damage:Variant):
+func _on_hurt_box_hurt(damage, _angle, _knockback):
 	hp -= damage
 	print(hp)
 
