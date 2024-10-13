@@ -7,20 +7,20 @@ extends CharacterBody2D
 @onready var animations = $AnimationPlayer
 
 func _ready():
-    animations.play("walk")
+	animations.play("walk")
 
 
 func _physics_process(_delta):
-    var direction = global_position.direction_to(player.global_position)
-    velocity = direction*movementSpeed
-    move_and_slide()
+	var direction = global_position.direction_to(player.global_position)
+	velocity = direction*movementSpeed
+	move_and_slide()
 
-    if direction.x > 0.2:
-        sprite.flip_h = true
-    elif direction.x < -0.2:
-        sprite.flip_h = false
+	if direction.x > 0.2:
+		sprite.flip_h = true
+	elif direction.x < -0.2:
+		sprite.flip_h = false
 
 func _on_hurt_box_hurt(damage):
-    hp -= damage
-    if hp <= 0:
-        queue_free()
+	hp -= damage
+	if hp <= 0:
+		queue_free()
