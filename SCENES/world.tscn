@@ -35,3 +35,5 @@ region_rect = Rect2(0, 0, 1000, 1000)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("3_xtsdt")]
 spawns = Array[ExtResource("4_ovdnq")]([SubResource("Resource_85cnl"), SubResource("Resource_ogt00")])
+
+[node name="Node2D" type="Node2D" parent="." groups=["loot"]]
