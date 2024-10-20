@@ -40,6 +40,7 @@ text = "Name"
 horizontal_alignment = 1
 
 [node name="Label_description" type="Label" parent="."]
+layout_mode = 0
 offset_left = 4.0
 offset_top = 27.0
 offset_right = 166.0
@@ -50,6 +51,7 @@ text = "description of item"
 autowrap_mode = 3
 
 [node name="Label_level" type="Label" parent="."]
+layout_mode = 0
 offset_left = 130.0
 offset_top = 3.0
 offset_right = 170.0
